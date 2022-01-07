@@ -1,8 +1,9 @@
 #!/bin/bash
 
-echo $#
-echo $1
-echo $2
-echo $3
-echo $4
-echo $5
+echo where are $# arguments
+i=1
+for ARGS
+do
+echo arg$i: $ARGS
+let i++
+done
