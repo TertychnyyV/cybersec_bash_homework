@@ -7,13 +7,16 @@
 # Usege: bash osdetect.sh
 # Outputs: Linux or MSWin or macOS
 
+GET_OS () {
 if type -t wevtutil &> /dev/null
-then 
-    OS=MSWin
+then
+    echo MSWin
 elif type -t scutil &> /dev/null
 then
-    OS=macOS
+    echo macOS
 else
-    OS=Linux
+    echo Linux
 fi
-echo $OS
+}
+
+echo OS = $(GET_OS)
